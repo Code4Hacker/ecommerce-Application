@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import { useStateContext } from "../context/StateContext";
 import Link from "next/link";
 const Success  = () => {
