@@ -10,7 +10,7 @@ function Banner({ banner }) {
           <p>{banner[0].smallText}</p>
           <h3>{banner[0].midText}</h3>
           <h1>{banner[0].largeText1}</h1>
-          <Image src={urlFor(banner[0].image && banner[0].image[0]).url()} alt={banner[0].name}/>
+          <img src={urlFor(banner[0].image && banner[0].image[0]).url()} alt={banner[0].name}/>
           <Link href={`/product/${banner[0].slug.current}`}>
               <button type='button'>{banner[0].buttonText}</button>
           </Link>
