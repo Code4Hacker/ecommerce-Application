@@ -652,6 +652,12 @@ html{
   margin: 12px;
   width:50%;
 }
+.container.as-main{
+  margin: 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .cart-products .add-to-cart button{
   padding: 10px;
   width: 100%;
@@ -734,6 +740,9 @@ html{
     overflow-y: visible;
     display: flex;
   }
+  .desc p{
+    color: black !important;
+  }
   .little-view{
     width:50px;
     margin: 10px;
@@ -791,7 +800,7 @@ html{
     color: rgb(255, 198, 198);
   }
   .desc p{
-    color: red !important;
+    color: rgb(0, 0, 0) !important;
   }
   .float-left h2{
     font-weight: 900;
@@ -907,6 +916,17 @@ html{
 }
 }
 @media screen and (max-width:650px){
+  
+.product-box{
+  margin: 2px !important;
+  width: 230px;
+  height: 180px;
+}
+.product-box img{
+  width: 100% !important;
+  
+  height: 150px !important;
+}
   .smart-object{
     display: flex;
     flex-direction: column;
@@ -914,15 +934,36 @@ html{
     width: 100%;
     align-items: center;
   }
+  .container.as-main{
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 30px !important;
+  }
 }
 @media screen and (max-width:545px){
+  .banner-container img, .ftBanner-container img{
+    width: 200px;
+  }
   .discount{
     margin-top: 70px;
     font-size: small;
     color: rgb(255, 198, 198);
+  } 
+  .product-box{
+    margin: 2px !important;
+    width: 200px !important;
+    padding: 0px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    height: 180px !important;
   }
-  .desc p{
-    color: red !important;
+  .product-box img{
+    margin: -10px;
+    width: 90% !important;
+    
+    height: 150px !important;
   }
   .float-left h2{
     font-weight: 900;
@@ -995,6 +1036,24 @@ html{
   margin-top: -12px;
 }
 }
+@media screen and (max-width:428px) {
+  
+  .product-box{
+    margin: 2px !important;
+    font-size: small;
+    width: 150px !important;
+    padding: 0px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    height: 150px !important;
+  }
+  .product-box img{
+    margin: -10px;
+    width: 70% !important;
+    
+    height: 100px !important;
+  }
+}
 @media screen and (max-width:400px){
   
 .cart-container{
@@ -1007,7 +1066,22 @@ html{
 }
 }
 @media screen and (max-width:330px){
-  
+ 
+  .product-box{
+    margin: 2px !important;
+    font-size: small;
+    width: 120px !important;
+    padding: 0px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    height: 150px !important;
+  }
+  .product-box img{
+    margin: -10px;
+    width: 80% !important;
+    object-fit: cover !important;
+    height: 100px !important;
+  } 
 .cart-products .add-to-cart{
   border: 2px solid rgb(204, 0, 136);
   box-shadow:inset 0px 0px 10px 0px rgba(0, 0, 0, 0.425);
