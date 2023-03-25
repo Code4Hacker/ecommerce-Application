@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image';
 import { urlFor } from '../lib/client';
 const SmallCard = ({ smallCard : { image, slug, name} }) => {
   return (
@@ -8,7 +9,7 @@ const SmallCard = ({ smallCard : { image, slug, name} }) => {
         <div className="name_for_it">
           <p>{ name }</p>
         </div>
-        <img src={urlFor(image && image[0]).url()} alt={name}/>
+        <Image src={urlFor(image && image[0]).url()} alt={name}/>
      </Link>
    </div>
   )

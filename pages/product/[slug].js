@@ -4,6 +4,7 @@ import { FaCrown } from "react-icons/fa";
 import { BsFillCartPlusFill, BsFillCartCheckFill } from "react-icons/bs";
 import SmallCard from '../../components/SmallCard';
 import { useStateContext } from '../../context/StateContext';
+import Image from 'next/image';
 const Slug = ({ oneData, products }) => {
   const [images, setImages] = useState(0);
   const {image, name, price, details, _id} = oneData;
@@ -18,13 +19,13 @@ const Slug = ({ oneData, products }) => {
         <div className='col-xl-12 smart-object'>
         <div className='images left'>
             <div className='image'>
-                <img src={urlFor(image && image[images])} alt={name}/>
+                <Image src={urlFor(image && image[images])} alt={name}/>
             </div>
             <div className='related'>
                 {
                     image?.map((item, i) => (
                         <div className={i===images?"selected":"little-view"} key={i}>
-                            <img src={urlFor(item).url()} onMouseMove={() => setImages(i)}/>
+                            <Image src={urlFor(item).url()} onMouseMove={() => setImages(i)}/>
                         </div>
                     ))
                 }

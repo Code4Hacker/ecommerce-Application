@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { urlFor } from '../lib/client';
 import { useStateContext } from '../context/StateContext';
 import { toast } from 'react-hot-toast';
+import Image from 'next/image';
 import getStripe from '../lib/getStripe';
 const Cart = () => {
   const { totalQuantity, totalPrice, setShowCart,  cartItems, theProductFromCart, onRemove} = useStateContext();
@@ -44,7 +45,7 @@ const Cart = () => {
             <div className="cart-item">
               { cartItems.length > 0 && cartItems.map((item) => 
               <div className='item' key={item._id}>
-                <img src={urlFor(item?.image[0])} />
+                <Image src={urlFor(item?.image[0])} />
                 <div className='small'>
                 <div className='gradient sharp'><div className="left">{item.name}</div><div className="right right-align">Tsh.{item.price}/=</div></div>
                 <div className="compress">

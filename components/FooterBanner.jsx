@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
+import Image from 'next/image'
 function FooterBanner({ ftBanner }) {
   return (
     <div className='ftBanner-container'>
@@ -9,7 +10,7 @@ function FooterBanner({ ftBanner }) {
           <p>{ftBanner[0].smallText}</p>
           <h3>{ftBanner[0].midText}</h3>
           <h2>{ftBanner[0].largeText2}</h2>
-          <img src={urlFor(ftBanner[0].image[0]).url()} alt="Headphone"/>
+          <Image src={urlFor(ftBanner[0].image[0]).url()} alt="Headphone"/>
           <Link href={`/product/${ftBanner[0].slug.current}`}>
               <button type='button'>{ftBanner[0].buttonText}</button>
           </Link>
