@@ -25,7 +25,7 @@ const Slug = ({ oneData, products }) => {
                 {
                     image?.map((item, i) => (
                         <div className={i===images?"selected":"little-view"} key={i}>
-                            <Image src={urlFor(item).url()} onMouseMove={() => setImages(i)}/>
+                            <Image src={urlFor(item).url()} onMouseMove={() => setImages(i)} alt=""/>
                         </div>
                     ))
                 }
