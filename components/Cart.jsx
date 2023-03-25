@@ -34,7 +34,7 @@ const Cart = () => {
            </button>
            {cartItems.length < 1 && (<div className="empty-cart">
               <GiShoppingCart size={200}/>
-              <p className='small gradient sharp'>Oops, Sorry you didn't add anything either</p>
+              <p className='small gradient sharp'>Oops, Sorry you didn&apos;t add anything either</p>
               <div className="shopping-btn">
                   <Link href="/">
                       <button onClick={() => setShowCart(false)}>Continue Shopping</button>
