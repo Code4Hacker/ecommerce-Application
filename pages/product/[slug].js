@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { client, urlFor } from '../../lib/client';
 import { FaCrown } from "react-icons/fa";
 import { BsFillCartPlusFill, BsFillCartCheckFill } from "react-icons/bs";
@@ -7,7 +7,7 @@ import { useStateContext } from '../../context/StateContext';
 import Image from 'next/image';
 const Slug = ({ oneData, products }) => {
   const [images, setImages] = useState(0);
-  const {image, name, price, details, _id} = oneData;
+  const {image, name, price, details} = oneData;
   const rank = "(15)";
   const { incQty, decQty, qty, onAdd, setShowCart } = useStateContext();
   const handlerBuyCart = () => {
