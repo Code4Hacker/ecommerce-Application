@@ -7,7 +7,7 @@ const Success  = () => {
         localStorage.clear();
         setCartItems([]);
         setTotalPrice(0);
-        setTotalQuantity(0);
+        setTotalQuantity(0);``
     },[]);
     return (
         <div className="success">
