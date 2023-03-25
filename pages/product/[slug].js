@@ -14,7 +14,7 @@ const Slug = ({ oneData, products }) => {
     setShowCart(true);
   }
   return (
-    <div className='slug' key={_id}>
+    <div className='slug'>
         <div className='col-xl-12 smart-object'>
         <div className='images left'>
             <div className='image'>
@@ -23,8 +23,8 @@ const Slug = ({ oneData, products }) => {
             <div className='related'>
                 {
                     image?.map((item, i) => (
-                        <div className={i===images?"selected":"little-view"}>
-                            <img key={_id} src={urlFor(item).url()} onMouseMove={() => setImages(i)}/>
+                        <div className={i===images?"selected":"little-view"} key={i}>
+                            <img src={urlFor(item).url()} onMouseMove={() => setImages(i)}/>
                         </div>
                     ))
                 }
