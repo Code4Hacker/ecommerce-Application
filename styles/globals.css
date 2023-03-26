@@ -1011,7 +1011,7 @@ html{
   width: 100%;
   height: 100%;
  }
- 
+
  .product-box{
    margin: 2px;
    width: 20vw !important;
@@ -1144,7 +1144,9 @@ html{
 }
 }
 @media screen and (max-width:460px){
- 
+  .smart-object .image{
+    margin-top: 70px;
+   }
 .product-bo{
   margin: 2px;
   margin-top: 2px;
