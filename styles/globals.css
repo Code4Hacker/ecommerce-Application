@@ -1011,9 +1011,7 @@ html{
   width: 100%;
   height: 100%;
  }
- .smart-object .image, .smart-object .image:hover{
-  border-radius: 40%;
- }
+ 
  .product-box{
    margin: 2px;
    width: 20vw !important;
