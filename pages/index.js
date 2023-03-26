@@ -1,8 +1,11 @@
 import React from "react";
 import { Banner, Product, FooterBanner } from "../components";
+import Preloader from "../components/Preloader";
 import { client } from '../lib/client';
 const Home = ({ queryData , bannerData}) => (
+ 
   <div className="app-container">
+    <Preloader/>
     <Banner banner={ bannerData }/>
     <div className="container as-main">
       <h1>Best Seller Products</h1>

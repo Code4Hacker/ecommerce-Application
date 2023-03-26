@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Product({ product: {image, slug, name, price} }) {
   return (
-    <div className='col-3 product-box'>
+    <div className='col-3 product-bo'>
         <Link href={`/product/${slug.current}`} className="links">
           <div className="product-image">
             <img src={urlFor(image && image[0]).url()} alt={name} />

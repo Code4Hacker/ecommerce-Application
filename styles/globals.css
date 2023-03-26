@@ -163,6 +163,16 @@ html{
   width: 250px;
   height: auto;
 }
+.product-bo{
+  margin: 20px;
+  border-radius: 10px;
+  width: 250px;
+  height: auto;
+}
+.product-bo .product-image img,.product-bo .product-image img:hover{
+  width: 100%; 
+  margin-left: -20px; 
+}
 .product-image{
   transition: .3s ease-in-out;
   width: 100%;
@@ -922,6 +932,16 @@ html{
   margin-bottom: 0px;
   width: 250px;
   height: auto;
+} 
+.product-bo{
+  margin: 10px;
+  margin-bottom: 0px;
+  width: 250px;
+  height: auto;
+}
+.product-bo .product-image img,.product-bo .product-image img:hover{
+  width: 100%; 
+  margin-left: 0px; 
 }
 .description{
   position: relative;
@@ -969,6 +989,21 @@ html{
 }
 }
 @media screen and (max-width:650px){
+  
+.product-bo{
+  margin: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  width: 200px;
+  height: 200px;
+} 
+.product-bo img,.product-bo:hover img{
+  margin: 0px;
+  margin-bottom: 0px;
+  margin-left: -10px !important;
+  width: 170px;
+  height: auto;
+}
  .smart-object .float-right{
   font-size: small;
  } 
@@ -998,6 +1033,7 @@ html{
   object-fit: cover;
   height: 100% !important;
 }
+
   .smart-object{
     display: flex;
     flex-direction: column;
@@ -1103,6 +1139,32 @@ html{
   margin: 10px;
   margin-top: -12px;
 }
+.as-main h1{
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+}
+@media screen and (max-width:460px){
+ 
+.product-bo{
+  margin: 2px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  width: 180px;
+  height: 180px;
+} 
+.product-bo img,.product-bo:hover img{
+  margin: 0px;
+  margin-bottom: 0px;
+  margin-left: -10px !important;
+  width: 170px;
+  height: auto;
+}
+ .product-bo .product-image img,.product-bo .product-image img:hover{
+   width: 100%; 
+   margin-left: 0px; 
+ }
 }
 @media screen and (max-width:428px) {
   
@@ -1128,9 +1190,36 @@ html{
  object-fit: cover;
  height: 100% !important;
 }
+
 }
 @media screen and (max-width:400px){
   
+.product-bo{
+  margin: 4px;
+  margin-top: 4px;
+  background-color: rgb(207, 207, 207);
+  margin-bottom: 0px;
+  width: 130px;
+  height: 150px;
+  border-radius: 10px;
+  font-size: small;
+} 
+.price{
+  padding: 6px;
+  font-size: x-small !important;
+}
+.product-bo img,.product-bo:hover img{
+  margin: 0px;
+  margin-bottom: 0px;
+  margin-left: -30px !important;
+  width: 100px;
+  height: auto;
+}
+.product-bo p{
+  width: 100%;
+  text-align: center;
+  margin-left: -10px;
+}
 .cart-container{
   width:100%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.13);
@@ -1212,6 +1301,28 @@ html{
   overflow: hidden;
   height: 30vh;
 }
+
+.product-bo{
+  margin: 4px;
+  margin-top: 4px;
+  background-color: rgb(207, 207, 207);
+  margin-bottom: 0px;
+  width: 110px;
+  height: 120px;
+  border-radius: 10px;
+  font-size: x-small;
+} 
+.price{
+  padding: 6px;
+  font-size: xx-small !important;
+}
+.product-bo img,.product-bo:hover img{
+  margin: 0px;
+  margin-bottom: 0px;
+  margin-left: -20px !important;
+  width: 100px;
+  height: auto;
+}
 }
 /* Darkmode Changer Here */
 
@@ -1240,7 +1351,7 @@ html{
 }.as-main h4{
   color: rgb(202, 202, 202);
 }
-.darkmode .banner-container,.darkmode .product-image img, .darkmode .cart-buttons button,.darkmode .product-box, .darkmode .little-view, .darkmode .item img,.darkmode .smart-object .image{
+.darkmode .banner-container,.darkmode .product-image img, .darkmode .cart-buttons button,.darkmode .product-box, .darkmode .little-view, .darkmode .item img,.darkmode .smart-object .image,.darkmode .product-bo{
   background-color: rgb(29, 29, 29);
   color: hotpink;
 }
