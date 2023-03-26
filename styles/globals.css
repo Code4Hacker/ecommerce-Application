@@ -1145,7 +1145,8 @@ html{
 }
 @media screen and (max-width:460px){
   .smart-object .image{
-    margin-top: 70px;
+    margin-top: 50px;
+    height: 300px;
    }
 .product-bo{
   margin: 2px;
