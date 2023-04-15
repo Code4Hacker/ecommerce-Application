@@ -71,7 +71,6 @@ const Cart = () => {
               }
               <button type="button" onClick={handlerCheckout}>PAY WITH STRIPE</button>
               <button type="button" onClick={money}>
-                {console.log(cartItems)}
                 <a href={`https://wa.me/255767272367?text=${
                   cartItems?.length>0? cartItems.map((msg) => (' Product Name: '+msg.name+', Quantities: '+msg.quantity+" Total Price: "+(msg.price*msg.quantity)+" "+encodeURIComponent((msg.image[0].asset._ref).replace('image-','https://cdn.sanity.io/images/4zpcu7m4/production/').replace('-png', '.png').replace('-webp','.webp'))+" AND ")):"no"} Full Price:${totalPrice}`} target="_blank" rel="noopener noreferrer">Send via whatsapp</a>
               </button>
