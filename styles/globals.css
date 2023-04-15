@@ -16,6 +16,17 @@ html{
   margin-left: 0px;
 
 }
+a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: small;
+}a:hover{
+  text-decoration: none;
+  color: rgb(255, 204, 204);
+  text-transform: uppercase;
+  font-size: small;
+}
 .dark{
   position: relative;
   width: 40px;

@@ -4,7 +4,7 @@ const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      console.log(req.body);
+      // console.log(req.body);
         const params = {
             submit_type:'pay',
             mode:'payment',
