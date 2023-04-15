@@ -50,7 +50,7 @@ const Slug = ({ oneData, products }) => {
                 </div>
             </div>
             <div className="cart-buttons">
-                <button type='button' onClick={() => onAdd(oneData, qty)}><BsFillCartPlusFill/> Add Cart</button>
+                <button type='button' onClick={() => onAdd(oneData, qty, images)}><BsFillCartPlusFill/> Add Cart</button>
                 <button type="button" onClick={handlerBuyCart}><BsFillCartCheckFill/> Buy Now</button>
             </div>
         </div>

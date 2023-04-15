@@ -1,6 +1,5 @@
-import Stripe from 'stripe';
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
+import { toast } from "react-hot-toast";
 
-export default async function money(req, res) {
-  
+export default function money() {
+  toast.success(` Redirect to WhatsApp...`);
 }

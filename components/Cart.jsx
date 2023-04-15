@@ -8,7 +8,7 @@ import { toast } from 'react-hot-toast';
 import getStripe from '../lib/getStripe';
 import money from '../pages/api/azampay';
 const Cart = () => {
-  const { totalQuantity, totalPrice, setShowCart,  cartItems, theProductFromCart, onRemove} = useStateContext();
+  const { totalQuantity, totalPrice, setShowCart,  cartItems, theProductFromCart, onRemove, imgid } = useStateContext();
   const cartRef = useRef();
   const handlerCheckout = async () => {
     const stripe = await getStripe();
@@ -46,7 +46,7 @@ const Cart = () => {
               { cartItems.length > 0 && cartItems.map((item) => 
               <div className='item' key={item._id}>
                 {console.log(item)}
-                <img src={urlFor(item?.image[0])} alt=""/>
+                <img src={urlFor(item?.image[imgid])} alt=""/>
                 <div className='small'>
                 <div className='gradient sharp'><div className="left">{item.name}</div><div className="right right-align">Tsh.{item.price}/=</div></div>
                 <div className="compress">
@@ -71,8 +71,8 @@ const Cart = () => {
               }
               <button type="button" onClick={handlerCheckout}>PAY WITH STRIPE</button>
               <button type="button" onClick={money}>
-                <a href={`https://wa.me/255767272367?text=${
-                  cartItems?.length>0? cartItems.map((msg) => (' Product Name: '+msg.name+', Quantities: '+msg.quantity+" Total Price: "+(msg.price*msg.quantity)+" "+encodeURIComponent((msg.image[0].asset._ref).replace('image-','https://cdn.sanity.io/images/4zpcu7m4/production/').replace('-png', '.png').replace('-webp','.webp'))+" AND ")):"no"} Full Price:${totalPrice}`} target="_blank" rel="noopener noreferrer">Send via whatsapp</a>
+                <a href={`${process.env.NEXT_PUBLIC_LINK}?text=${
+                  cartItems?.length>0? cartItems.map((msg) => (' Product Name: '+msg.name+', Quantities: '+msg.quantity+" Total Price: "+(msg.price*msg.quantity)+" "+encodeURIComponent((msg.image[imgid].asset._ref).replace('image-','https://cdn.sanity.io/images/4zpcu7m4/production/').replace('-png', '.png').replace('-webp','.webp'))+" AND ")):"no"} Full Price:${totalPrice}`} target="_blank" rel="noopener noreferrer">Send via whatsapp</a>
               </button>
             </div>
            </div>

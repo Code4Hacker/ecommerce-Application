@@ -9,15 +9,17 @@ export const StateContext = ({ children }) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalQuantity, setTotalQuantity] = useState(0);
     const [qty, setQty] = useState(1);
+    const [imgid, setImgid] = useState(0);
 
     let theProduct,index;
-    const onAdd = (product, quantity) => {
+    const onAdd = (product, quantity, images) => {
+        setImgid(images);
         const CheckTheProduct = cartItems.find((item) => item._id === product._id);
         setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
         setTotalQuantity((prevTotalQuantity) => prevTotalQuantity + quantity);
         if(CheckTheProduct){
             const updateCart = cartItems.map((cartProduct) => {
-                if(cartProduct._id === product._id) return {
+                if(cartProduct.image[images] === product.image[images]) return {
                     ...cartProduct, quantity : cartProduct.quantity + quantity
                 }
             }
@@ -84,7 +86,8 @@ export const StateContext = ({ children }) => {
                 onRemove,
                 totalPrice,
                 setTotalPrice,
-                setCartItems
+                setCartItems,
+                imgid
 
             }
         }>
