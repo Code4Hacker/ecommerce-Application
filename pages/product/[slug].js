@@ -10,7 +10,7 @@ const Slug = ({ oneData, products }) => {
   const rank = "(15)";
   const { incQty, decQty, qty, onAdd, setShowCart } = useStateContext();
   const handlerBuyCart = () => {
-    onAdd(oneData, qty);
+    onAdd(oneData, qty, images);
     setShowCart(true);
   }
   return (
