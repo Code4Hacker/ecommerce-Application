@@ -6,7 +6,7 @@ import { urlFor } from '../lib/client';
 import { useStateContext } from '../context/StateContext';
 import { toast } from 'react-hot-toast';
 import getStripe from '../lib/getStripe';
-import money from '../pages/api/azampay';
+import money from '../pages/api/whatsapp_toast';
 const Cart = () => {
   const { totalQuantity, totalPrice, setShowCart,  cartItems, theProductFromCart, onRemove, imgid } = useStateContext();
   const cartRef = useRef();
@@ -45,7 +45,6 @@ const Cart = () => {
             <div className="cart-item">
               { cartItems.length > 0 && cartItems.map((item) => 
               <div className='item' key={item._id}>
-                {console.log(item)}
                 <img src={urlFor(item?.image[imgid])} alt=""/>
                 <div className='small'>
                 <div className='gradient sharp'><div className="left">{item.name}</div><div className="right right-align">Tsh.{item.price}/=</div></div>
