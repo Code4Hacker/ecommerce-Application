@@ -1291,6 +1291,10 @@ a{
   align-items: start;
   background-color: rgb(236, 236, 236);
 }
+.menu h2{
+  font-size: small;
+  margin-top: 8px;
+}
 }
 @media screen and (max-width:314px){
   

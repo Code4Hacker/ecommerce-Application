@@ -31,7 +31,7 @@ const Menu = () => {
             <div className="logo_cart">
             <div className="dark" onClick={darkmode} title="Double Tap if not work">
             </div>
-            <h2><Link href="/" className='gradient small'><span>Gemini</span><span></span></Link></h2> 
+            <h2><Link href="/" className='gradient small'><span>Great Pedant</span><span></span></Link></h2> 
             </div>
 
             <button className='cart-tool' onClick={() => setShowCart(true)}><AiOutlineShoppingCart/> <span className='cart-items'>{totalQuantity}</span></button>

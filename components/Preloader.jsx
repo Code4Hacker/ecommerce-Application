@@ -12,11 +12,11 @@ const Preloader = () => {
         height:"100%",
         left:"0px",
         zIndex:"6",
-        backdropFilter:"blur(40px)"
+        backdropFilter:"blur(50px)"
     }} className="pre-loader">
         <div className="pre-loader-bar">
             <div className="title gradient" style={{position:"absolute",top:"50%",left:"50%",transform:"translate(-50%, -50%)"}}>
-                <h1 style={{color:"transparent",fontWeight:900,textAlign:"center",background:"linear-gradient(90deg,red,purple)",backgroundClip:"text",WebkitBackgroundClip:"text"}}>ECOMMERCE</h1>
+                <h1 style={{color:"transparent",fontWeight:900,textAlign:"center",background:"linear-gradient(90deg,red,purple)",backgroundClip:"text",WebkitBackgroundClip:"text"}}>ECO-GEMINI</h1>
             </div>
         </div>
     </div>
