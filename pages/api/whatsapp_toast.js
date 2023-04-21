@@ -12,20 +12,20 @@ export default function money(cartItems,imgid,totalPrice) {
       encodedParams.append("senderid", "MyCompany");
       encodedParams.append("schedule", "1377959755");
       encodedParams.append("return", "http://yourwebsite.com");
-      encodedParams.append("key", `${process.env.NEXT_PUBLIC_SMS_KEY}`);
+      encodedParams.append("key", "C205E7E9-DB96-BC3F-2F96-611FE7DE1F45");
       encodedParams.append("username", "geminiecommerce23@gmail.com");
       
       const options = {
         method: 'POST',
         headers: {
           'content-type': 'application/x-www-form-urlencoded',
-          'X-RapidAPI-Key': `${process.env.NEXT_PUBLIC_RAPID}`,
-          'X-RapidAPI-Host': `${process.env.NEXT_PUBLIC_URL}`
+          'X-RapidAPI-Key': 'fee9d2f76cmsha6654ed67aca14cp159bdbjsn23d750d5c041',
+          'X-RapidAPI-Host': 'inteltech.p.rapidapi.com'
         },
         body: encodedParams
       };
       
-      fetch(`https://${process.env.NEXT_PUBLIC_URL}/send.php`, options)
+      fetch('https://inteltech.p.rapidapi.com/send.php', options)
         .then(response => response.json())
         .then(response => console.log(response))
         .catch(err => console.error(err));
