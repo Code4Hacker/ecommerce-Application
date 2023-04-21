@@ -69,9 +69,9 @@ const Cart = () => {
                 )
               }
               {/* <button type="button" onClick={handlerCheckout}>PAY WITH STRIPE</button> */}
-              <button type="button" onClick={money}>
+              <button type="button" onClick={() => money(cartItems,imgid,totalPrice)}>
                 <a href={`${process.env.NEXT_PUBLIC_LINK}?text=${
-                  cartItems?.length>0? cartItems.map((msg) => (' Product Name: '+msg.name+', Quantities: '+msg.quantity+" Total Price: "+(msg.price*msg.quantity)+" "+encodeURIComponent((msg.image[imgid].asset._ref).replace('image-','https://cdn.sanity.io/images/4zpcu7m4/production/').replace('-png', '.png').replace('-webp','.webp'))+" AND ")):"no"} Full Price:${totalPrice}`} target="_blank" rel="noopener noreferrer">Send via whatsapp</a>
+                  cartItems?.length>0? cartItems.map((msg) => (' Product Name: '+msg.name+', Quantities: '+msg.quantity+" Total Price: "+(msg.price*msg.quantity)+" "+encodeURIComponent((msg.image[imgid].asset._ref).replace('image-','https://cdn.sanity.io/images/4zpcu7m4/production/').replace('-png', '.png').replace('-webp','.webp'))+" AND ")):"no"} Full Price:${totalPrice}`} target="_blank" rel="noopener noreferrer" id='sendItem'>Send via whatsapp</a>
               </button>
             </div>
            </div>
