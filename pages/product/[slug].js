@@ -42,7 +42,7 @@ const Slug = ({ oneData, products }) => {
             </span>
             <p className='details'>Details:</p>
             <p>{details}</p>
-            <p className='ranking'>{price} TZS</p>
+            <p className='ranking'>{} TZS</p>
             <div className="quantity">
                 <div>{qty<=1?"Quantity":"Quantities"}:</div>
                 <div className='add-to-cart'>
